@@ -3,9 +3,6 @@ const jwt = require("jsonwebtoken")
 const { successResponseHandler, errorResponseHandler } = require("../utils/responseHandler")
 
 const getUsersController = async (req, res) => {
-  let error = false;
-  if (error) throw "Error occured server error"
-  else throw "Database error"
   try {
     let query = {}
     if (req.query.ageStart && req.query.ageEnd) {
